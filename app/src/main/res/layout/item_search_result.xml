@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txt_sort_id"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txt_music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="山丘"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_music_alias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_toEndOf="@+id/txt_music_name"
+            android:layout_toRightOf="@+id/txt_music_name"
+            android:text="Hills"
+            android:textColor="@color/view_grey"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txt_singerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_music_name"
+            android:layout_marginTop="4dp"
+            android:text="李宗盛"
+            android:textColor="@color/text_grey"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/txt_cut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txt_singerName"
+            android:text="-"
+            android:layout_marginLeft="4dp"
+            android:layout_alignBaseline="@id/txt_singerName"
+            android:textColor="@color/text_grey"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/txt_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txt_cut"
+            android:text="山丘"
+            android:layout_marginLeft="4dp"
+            android:layout_alignBaseline="@id/txt_cut"
+            android:textColor="@color/text_grey"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:src="@mipmap/ic_more"/>
+
+</LinearLayout>

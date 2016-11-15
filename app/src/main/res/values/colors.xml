@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="translucent">#00000000</color>
+    <color name="white">#ffffff</color>
+
+    <!-- zxing -->
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#a6000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <color name="corner_grey">#2d2b2b</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="primary_color">#ff4c4b</color>
+    <color name="yellow">#f8fb91</color>
+    <color name="red">#ffcc0000</color>
+    <color name="blue">#395d84</color>
+    trans_time
+    <color name="text_grey">#888888</color>
+    <color name="view_grey">#F2F2F2</color>
+    <color name="bg_color">#161D24</color>
+    <color name="corner_blue">#25C8FC</color>
+    <color name="transparent">#00000000</color>
+    <color name="tab_bg">#f7f8f8</color>
+    <color name="cut_line">#d4d4d4</color>
+    <!--定义tab样式-->
+    <color name="tab_text_common_color">#000</color>
+    <color name="tab_text_select_color">#7AA410</color>
+    <color name="main_color">#006F6B</color>
+    <color name="green">#7AA410</color>
+
+    <!--tv-->
+    <color name="black_overlay">#66000000</color>
+    <color name="ijk_color_blue_main">@color/ijk_color_blue_500</color>
+    <color name="ijk_color_blue_50">#E3F2FD</color>
+    <color name="ijk_color_blue_100">#BBDEFB</color>
+    <color name="ijk_color_blue_200">#90CAF9</color>
+    <color name="ijk_color_blue_300">#64B5F6</color>
+    <color name="ijk_color_blue_400">#42A5F5</color>
+    <color name="ijk_color_blue_500">#2196F3</color>
+    <color name="ijk_color_blue_600">#1E88E5</color>
+    <color name="ijk_color_blue_700">#1976D2</color>
+    <color name="ijk_color_blue_800">#1565C0</color>
+    <color name="ijk_color_blue_900">#0D47A1</color>
+    <color name="ijk_transparent_dark">#77000000</color>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D3D3D3"
+        android:orientation="horizontal">
+
+        <!--android:background="@drawable/search_edittext_shape"
+                   android:drawableLeft="@drawable/search_icon"-->
+        <EditText
+            android:id="@+id/et_search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/et_search_bg"
+            android:hint="请输入网点名称或者地址"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="48dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/btn_get_code_bg"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/xrec_info_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/bg_color"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

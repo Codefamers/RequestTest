@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RequestTest</string>
+    <string name="title_activity_rx_java">RxJavaActivity</string>
+    <string name="title_activity_rx_retrofit">RxRetrofitActivity</string>
+</resources>
