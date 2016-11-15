@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.lv_item)
     ListView lvItem;
     private String imageUrl = "http://pic.xiami.net/images/trade/ams_homepage/42/5772298763782_2125265_1467099527.jpg";
-    private int resourseId = R.mipmap.baseimage;
+
 
 
     @Override
