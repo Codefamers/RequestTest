@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
                         alterableGirl.display();
                         alterableGirl.setGirlCharacterStyle(new LivelyCharacter());
                         alterableGirl.display();
-                       // startActivity(new Intent(MainActivity.this, RxJavaActivity.class));
                         break;
                     case 1:
                         startActivity(new Intent(MainActivity.this, RxRetrofitActivity.class));
