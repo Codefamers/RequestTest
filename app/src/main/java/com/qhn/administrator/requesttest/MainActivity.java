@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.qhn.administrator.requesttest.ObserverPattern.Observer;
 import com.qhn.administrator.requesttest.strategyPattern.AlterableGirl;
 import com.qhn.administrator.requesttest.strategyPattern.LivelyCharacter;
 import com.qhn.administrator.requesttest.strategyPattern.UglyAppearance;
@@ -22,7 +23,50 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-    /*
+
+    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+    private static final String TAG = "MainActivity";
+    @Bind(R.id.lv_item)
+    ListView lvItem;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+        String [] data=new String []{"策略模式","观察者模式","rxJava+retrofit示例","Glide的基本使用"};
+        final ArrayAdapter adapter=new ArrayAdapter(this,android.R.layout.simple_expandable_list_item_1,data);
+        lvItem.setAdapter(adapter);
+
+        lvItem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i) {
+                    case 0:
+                        AlterableGirl alterableGirl=new AlterableGirl();
+                        alterableGirl.display();
+                        alterableGirl.setAppearanceStyle(new UglyAppearance());
+                        alterableGirl.display();
+                        alterableGirl.setGirlCharacterStyle(new LivelyCharacter());
+                        alterableGirl.display();
+                        break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, ObservableActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, RxRetrofitActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(MainActivity.this, MapActivity.class));
+                        break;
+                }
+            }
+        });
+
+    }
+
+
+}
+ /*
        * placeholder()                                 占位符在显示要加载的图片之前所显示的图片;
        * error()                                       glide 未加载正确图片时需要显示的图片;
        * dontAnimate()                                 取消淡入淡出效果
@@ -66,60 +110,3 @@ public class MainActivity extends AppCompatActivity {
     *
     *
     * */
-    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-    private static final String TAG = "MainActivity";
-    @Bind(R.id.lv_item)
-    ListView lvItem;
-    private String imageUrl = "http://pic.xiami.net/images/trade/ams_homepage/42/5772298763782_2125265_1467099527.jpg";
-
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-        String [] data=new String []{"rxJava示例","rxJava+retrofit示例","Glide的基本使用"};
-        final ArrayAdapter adapter=new ArrayAdapter(this,android.R.layout.simple_expandable_list_item_1,data);
-        lvItem.setAdapter(adapter);
-
-        lvItem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i) {
-                    case 0:
-                        AlterableGirl alterableGirl=new AlterableGirl();
-                        alterableGirl.display();
-                        alterableGirl.setAppearanceStyle(new UglyAppearance());
-                        alterableGirl.display();
-                        alterableGirl.setGirlCharacterStyle(new LivelyCharacter());
-                        alterableGirl.display();
-                        break;
-                    case 1:
-                        startActivity(new Intent(MainActivity.this, RxRetrofitActivity.class));
-                        break;
-                    case 2:
-                        startActivity(new Intent(MainActivity.this, MapActivity.class));
-                        break;
-                }
-            }
-        });
-
-    }
-
-    private void postRequest() {
-        //提交gson请求
-                /*String json = "{'password':'123456',"
-                        + "'username':'shenhe'}";
-                RequestBody body = RequestBody.create(JSON,json);*/
-        //提交键值对请求
-        RequestBody body = new FormEncodingBuilder().add("password", "123456").add("username", "shenhe").build();
-        OkHttpUtils.okHttpPost(MainActivity.this, "http://192.168.2.106:8080/chengdongapp/login.call"
-                , body, new OkHttpUtils.OnDataFinish() {
-                    @Override
-                    public void OnSuccess(String result) {
-                        Log.d(TAG, "OnSuccess: " + result);
-                    }
-                });
-    }
-}

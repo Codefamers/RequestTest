@@ -10,12 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.qhn.administrator.requesttest.MainActivity">
 
-    <TextView
-        android:text="15510974083"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:autoLink="phone" />
 
     <ListView
         android:id="@+id/lv_item"

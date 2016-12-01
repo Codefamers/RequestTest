@@ -192,7 +192,7 @@ public class RxJavaActivity extends AppCompatActivity {
             @Override
             public void onNext(String s) {
                 Log.d(TAG, "onCompleted: " + s);
-                //Snackbar.make(null,s,Snackbar.LENGTH_LONG).show();
+
                 Toast.makeText(RxJavaActivity.this, s, Toast.LENGTH_SHORT).show();
             }
 
